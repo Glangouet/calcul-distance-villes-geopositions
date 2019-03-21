@@ -11,9 +11,9 @@ Le résultat s'affichera dans la console.
 
 ```
 
-guillaume@Guillaume:~/Bureau/Projets/calcul-distance-villes-geopositions$ php citySearch.php array(19) 
+guillaume@Guillaume:~/Bureau/Projets/calcul-distance-villes-geopositions$ php citySearch.php
 
-
+array(19) 
 {
   ["PARIS"]=>
   array(18) {
