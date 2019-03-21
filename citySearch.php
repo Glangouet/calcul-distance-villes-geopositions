@@ -92,12 +92,8 @@ function check(array $cities, array $c, array $finalTable = []) {
         // Boucle sur le tableau de ville
         foreach ($cities as $index => $city) {
 
-            // On verifie de ne pas ajouter la ville utilisée
-            if ($index !== $c[0]) {
-
-                // On ajoute à $newTable['NomDeVille'] = la distance entre celle-ci et la ville donnée à la function
-                $newTable[$city[0]] = distance($c[1], $c[2], $city[1], $city[2]);
-            }
+            // On ajoute à $newTable['NomDeVille'] = la distance entre celle-ci et la ville donnée à la function
+            $newTable[$city[0]] = distance($c[1], $c[2], $city[1], $city[2]);
         }
 
         // Tri le nouveau tableau de la plus proche des villes à la plus loin
