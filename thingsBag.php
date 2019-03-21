@@ -10,6 +10,7 @@
 
 $things = [ 'ordinateur' => 4, 'disque' => 5, 'television' => 10, 'bidule' => 4, 'assietes' => 3, 'bd' => 2 ];
 $newThings = getMostThings(20, $things, []);
+
 foreach ($newThings as $key => $th) {
     printf("objet: %s, poids: %d \n", $key, $th);
 }
