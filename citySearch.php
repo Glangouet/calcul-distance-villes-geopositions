@@ -84,7 +84,7 @@ function check(array $cities, array $c, array $finalTable = []) {
     $cities = refreshTable($cities, $c);
 
     // Condition d'arrêt quand il n'y a plus de ville dans le tableau
-    if (count($cities) > 1) {
+    if (count($cities) > 0) {
 
         // Déclaration du tableau qui contiendra les distances
         $newTable = [];
