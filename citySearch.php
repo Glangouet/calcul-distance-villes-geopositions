@@ -8,7 +8,7 @@
  */
 
 
-// Tableau donnée de base
+// Tableau de villes fourni de base
 $cities = [
     [0, 'PARIS', 'Paris', 48.857257, 2.344311],
     [1, 'MARSEILLE', 'Marseille', 43.2958, 5.366067],
@@ -71,7 +71,7 @@ function recreateTable(array $cities) {
 
 /**
  *
- * Fonction récursive créant le circuit de ville à parcourir
+ * Fonction récursive créant le circuit de villes à parcourir
  *
  * @param array $cities
  * @param array $c
@@ -80,7 +80,7 @@ function recreateTable(array $cities) {
  */
 function check(array $cities, array $c, array $finalTable = []) {
 
-    // Supression de la ville donné dans le tableau afin de ne pas la prendre en compte
+    // Supression de la ville donnée dans le tableau afin de ne pas la prendre en compte
     $cities = refreshTable($cities, $c);
 
     // Condition d'arrêt quand il n'y a plus de ville dans le tableau
@@ -89,7 +89,7 @@ function check(array $cities, array $c, array $finalTable = []) {
         // Déclaration du tableau qui contiendra les distances
         $newTable = [];
 
-        // Boucle sur le tableau de ville
+        // Boucle sur le tableau de villes
         foreach ($cities as $index => $city) {
 
             // On ajoute à $newTable['NomDeVille'] = la distance entre celle-ci et la ville donnée à la function
@@ -106,7 +106,7 @@ function check(array $cities, array $c, array $finalTable = []) {
         // Ajout de la ville dans le tableau final avec la distance en KM
         $finalTable[$nearCityName] = $newTable[$nearCityName];
 
-        // Appelle récursif de la fonction en passant en paramêtre le tableau de ville,
+        // Appel récursif de la fonction en passant en paramêtre le tableau de ville,
         // la nouvelle ville de départ et le tableau final à renvoyer.
         return check($cities, $nearCity, $finalTable);
     }
@@ -118,7 +118,7 @@ function check(array $cities, array $c, array $finalTable = []) {
 
 /**
  *
- * Supprime du tableau de ville la ville donnée
+ * Supprime du tableau de ville, la ville donnée
  *
  * @param array $cities
  * @param array $c
@@ -137,7 +137,7 @@ function refreshTable(array $cities, array $c) {
 
 /**
  *
- * Retourne la distance en metre ou kilometre (si $unit = 'k') entre deux latitude et longitude fournies
+ * Retourne la distance en metre ou kilometre (si $unit = 'k') entre deux latitudes et longitudes fournies
  * (vol d'oiseau)
  *
  */
